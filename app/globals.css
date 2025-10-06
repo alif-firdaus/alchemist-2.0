@@ -5,7 +5,7 @@
 	--color-bgbase: #0a0a0a;
 	--color-void: #151515;
 	--color-charcoal: #262626;
-	--color-smoke: #bfbfbf;
+	--color-smoke: #aeaeae;
 	--color-lava: #fd5842;
 	--color-floral-white: #fffbef;
 	--color-light-border: #ebe7dc;
@@ -15,7 +15,8 @@
 	--spacing-content-padding-sm: 20px;
 
 	/* Font Extension */
-	--font-aeonik-light: var(--aeonik-light), sans-serif;
-	--font-aeonik-regular: var(--aeonik-regular), sans-serif;
+	--font-aeonik-light: var(--font-aeonik-light), sans-serif;
+	--font-aeonik-regular: var(--font-aeonik-regular), sans-serif;
 	--font-aeonik-medium: var(--font-aeonik-medium), sans-serif;
+	--font-satoshi: var(--font-satoshi), sans-serif;
 }
