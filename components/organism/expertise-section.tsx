@@ -26,7 +26,7 @@ export default function ExpertiseSection() {
 				<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[70px] pt-16 pb-[70px] border-b-[1px] border-dark-border">
 					<div className="flex flex-col items-start justify-center w-full h-auto gap-[30px] ">
 						<p className="text-xs text-smoke font-satoshi">
-							[EXPERTISEXXX]
+							[EXPERTISEZXZ]
 						</p>
 
 						<h1 className="text-[42px] text-floral-white font-aeonik-regular leading-none">
