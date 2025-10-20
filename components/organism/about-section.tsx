@@ -18,7 +18,7 @@ export default function AboutSection() {
 							alt="Divider"
 							title="Divider"
 							priority={true}
-							className="h-full w-auto object-cover object-center"
+							className="h-full w-full object-cover object-center"
 						/>
 					</div>
 					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
@@ -99,7 +99,7 @@ export default function AboutSection() {
 								</p>
 							</div>
 
-							<h3 className="text-3xl text-floral-white font-aeonik-medium leading-[1.13]">
+							<h3 className="text-3xl text-floral-white font-aeonik-medium leading-[1.12]">
 								Crafting beauty in pixels, and weaving magic in
 								code.
 							</h3>
@@ -121,7 +121,7 @@ export default function AboutSection() {
 							alt="Divider"
 							title="Divider"
 							priority={true}
-							className="h-full w-auto object-cover object-center"
+							className="h-full w-full object-cover object-center"
 						/>
 					</div>
 					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>

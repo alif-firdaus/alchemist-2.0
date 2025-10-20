@@ -1,12 +1,15 @@
 // Import Sections //
 import HeroSection from "@/components/organism/hero-section";
 import AboutSection from "@/components/organism/about-section";
+import ExpertiseSection from "@/components/organism/expertise-section";
 
 export default function Home() {
 	return (
 		<main className="flex flex-col items-center justify-center w-full h-auto">
 			<HeroSection />
 			<AboutSection />
+			<ExpertiseSection />
+
 			<div className="w-full h-72 relative">
 				{/* Your content here */}
 				<div className="p-10 text-charcoal">
