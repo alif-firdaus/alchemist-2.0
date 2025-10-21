@@ -26,7 +26,7 @@ export default function ExpertiseSection() {
 				<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[70px] pt-16 pb-[70px] border-b-[1px] border-dark-border">
 					<div className="flex flex-col items-start justify-center w-full h-auto gap-[30px] ">
 						<p className="text-xs text-smoke font-satoshi">
-							[EXPERTISEZXZ]
+							[EXPERTISE]
 						</p>
 
 						<h1 className="text-[42px] text-floral-white font-aeonik-regular leading-none">
@@ -46,7 +46,7 @@ export default function ExpertiseSection() {
 				{/* <-- === Bottom Content Start === --> */}
 				<div className="flex flex-col items-center justify-center w-full h-auto">
 					{/* <-- == UI/UX Design Start == --> */}
-					<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[120px] pt-16 pb-[70px] border-b-[1px] border-dark-border">
+					<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[120px] pt-9 pb-9 border-b-[1px] border-dark-border">
 						<div className="flex flex-col items-start justify-center w-full h-auto gap-7">
 							<p className="text-xs text-smoke font-satoshi">
 								[E+01]
@@ -88,7 +88,7 @@ export default function ExpertiseSection() {
 					{/* <-- == UI/UX Design End == --> */}
 
 					{/* <-- == No-code Development Start == --> */}
-					<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[120px] pt-16 pb-[70px] border-b-[1px] border-dark-border">
+					<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[120px] pt-9 pb-9 border-b-[1px] border-dark-border">
 						<div className="flex flex-col items-start justify-center w-full h-auto gap-7">
 							<p className="text-xs text-smoke font-satoshi">
 								[E+02]
@@ -125,7 +125,7 @@ export default function ExpertiseSection() {
 					{/* <-- == No-code Development End == --> */}
 
 					{/* <-- == Front-end Development Start == --> */}
-					<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[120px] pt-16 pb-[70px] border-b-[1px] border-dark-border">
+					<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[120px] pt-9 pb-9 border-b-[1px] border-dark-border">
 						<div className="flex flex-col items-start justify-center w-full h-auto gap-7">
 							<p className="text-xs text-smoke font-satoshi">
 								[E+03]
