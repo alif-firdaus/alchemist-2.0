@@ -32,7 +32,7 @@ export default function WorksSection() {
 
 				{/* <-- === Bottom Content Start === --> */}
 				<div className="flex flex-col items-center justify-center w-full h-auto">
-					<WorksCard
+					{/* <WorksCard
 						thumbnail={mockup}
 						thumbnailalt="mockup"
 						thumbnailtitle="mockup"
@@ -66,7 +66,7 @@ export default function WorksSection() {
 						order="W+04"
 						title="Vismonk"
 						description="Velto helps founders automate operations, content workflows, and teamless processes in minutes, no-prompt engineering."
-					/>
+					/> */}
 				</div>
 				{/* <-- === Bottom Content End === --> */}
 
