@@ -18,7 +18,7 @@ const PrimaryButton = ({ text, bgColor, textColor }: PrimaryButtonProps) => {
 			<p className="text-base font-aeonik-medium flex w-fit h-fit items-center justify-center pb-[2px]">
 				{text}
 			</p>
-			<div className="flex items-center justify-center bg-lava rounded-[3px] h-[30px] w-[30px]">
+			<div className="flex items-center justify-center bg-lava rounded-[3px] h-[28px] w-[28px]">
 				<CornerDownRight
 					className="text-floral-white"
 					size={12}

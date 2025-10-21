@@ -2,6 +2,7 @@
 import HeroSection from "@/components/organism/hero-section";
 import AboutSection from "@/components/organism/about-section";
 import ExpertiseSection from "@/components/organism/expertise-section";
+import WorksSection from "@/components/organism/works-section";
 
 export default function Home() {
 	return (
@@ -9,6 +10,7 @@ export default function Home() {
 			<HeroSection />
 			<AboutSection />
 			<ExpertiseSection />
+			<WorksSection />
 
 			<div className="w-full h-72 relative">
 				{/* Your content here */}
