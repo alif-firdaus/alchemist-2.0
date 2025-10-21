@@ -4,7 +4,7 @@ import Image from "next/image";
 import WorksCard from "../molecule/works-card";
 
 // Import Assets //
-import mockup from "@/assets/images/img-mockup-2.png";
+import mockup from "@/assets/images/img-mockup-2.webp";
 import divider from "@/assets/images/img-divider.svg";
 
 export default function WorksSection() {
