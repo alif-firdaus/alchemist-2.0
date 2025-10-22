@@ -34,7 +34,7 @@ export default function ContactSection() {
 							</h3>
 							<p className="text-base text-smoke font-aeonik-regular leading-snug">
 								I&apos;m here to help you create something
-								amazing.
+								amazingxxx.
 							</p>
 						</div>
 						<ContactForm />
