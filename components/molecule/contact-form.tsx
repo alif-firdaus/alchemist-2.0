@@ -6,7 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
 import { ContactFormSchema } from "@/lib/schema";
-import { sendEmail } from "@/app/_action";
 
 // Import Components //
 import PrimaryButton from "../atom/primary-button";
@@ -31,23 +30,34 @@ export default function ContactForm() {
 	const processForm: SubmitHandler<ContactFormInputs> = async (data) => {
 		setFeedback({ type: null, message: "" });
 
-		const result = await sendEmail(data);
-
-		if (result?.success) {
-			console.log({ data: result.data });
-			setFeedback({
-				type: "success",
-				message: "Your message has been sent!",
+		try {
+			const res = await fetch("/api/form", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(data),
 			});
-			reset();
-			return;
-		}
 
-		setFeedback({
-			type: "error",
-			message: "Something went wrong! Please try again.",
-		});
-		console.log(result?.error);
+			const result = await res.json();
+
+			if (result.success) {
+				setFeedback({
+					type: "success",
+					message: "Your message has been sent!",
+				});
+				reset();
+			} else {
+				setFeedback({
+					type: "error",
+					message: "Something went wrong! Please try again.",
+				});
+			}
+		} catch (error) {
+			console.error(error);
+			setFeedback({
+				type: "error",
+				message: "Something went wrong! Please try again.",
+			});
+		}
 	};
 
 	return (

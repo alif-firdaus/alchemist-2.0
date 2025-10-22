@@ -15,7 +15,6 @@ const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
 		<p>
 			From <strong>{name}</strong> at {email}
 		</p>
-		<h3>Phone Number:</h3>
 		<h3>Message:</h3>
 		<p>{message}</p>
 	</div>
