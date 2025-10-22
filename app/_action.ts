@@ -27,19 +27,16 @@ export async function sendEmail(data: ContactFormInputs) {
 	const result = ContactFormSchema.safeParse(data);
 
 	if (result.success) {
-		const { name, email, phone, message } = result.data;
+		const { name, email, message } = result.data;
 		try {
 			const data = await resend.emails.send({
 				from: "onboarding@resend.dev",
 				to: ["aliffirdaus@petaniweb.com"],
 				subject: "Alchemist Connect",
-				text: `Name: ${name}\nEmail: ${email}\nPhone: ${
-					phone || "-"
-				}\nMessage: ${message}`,
+				text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
 				react: React.createElement(ContactFormEmail, {
 					name,
 					email,
-					phone,
 					message,
 				}),
 			});
