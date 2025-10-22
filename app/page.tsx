@@ -3,6 +3,7 @@ import HeroSection from "@/components/organism/hero-section";
 import AboutSection from "@/components/organism/about-section";
 import ExpertiseSection from "@/components/organism/expertise-section";
 import WorksSection from "@/components/organism/works-section";
+import ContactSection from "@/components/organism/contact-section";
 
 export default function Home() {
 	return (
@@ -11,6 +12,7 @@ export default function Home() {
 			<AboutSection />
 			<ExpertiseSection />
 			<WorksSection />
+			<ContactSection />
 
 			<div className="w-full h-72 relative">
 				{/* Your content here */}

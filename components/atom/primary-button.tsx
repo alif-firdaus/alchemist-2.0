@@ -5,14 +5,21 @@ interface PrimaryButtonProps {
 	text: string;
 	bgColor: string;
 	textColor: string;
+	type?: "button" | "submit" | "reset";
 }
 
-const PrimaryButton = ({ text, bgColor, textColor }: PrimaryButtonProps) => {
+const PrimaryButton = ({
+	text,
+	bgColor,
+	textColor,
+	type = "button",
+}: PrimaryButtonProps) => {
 	const bgColorClass = bgColor;
 	const textColorClass = textColor;
 
 	return (
 		<button
+			type={type}
 			className={`flex items-center justify-between w-full h-fit rounded pl-[18px] pr-3 py-3 ${bgColorClass} ${textColorClass}`}
 		>
 			<p className="text-base font-aeonik-medium flex w-fit h-fit items-center justify-center pb-[2px]">
