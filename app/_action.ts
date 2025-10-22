@@ -21,6 +21,7 @@ export async function addEntry(data: Inputs) {
 }
 
 type ContactFormInputs = z.infer<typeof ContactFormSchema>;
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(data: ContactFormInputs) {
@@ -40,8 +41,10 @@ export async function sendEmail(data: ContactFormInputs) {
 					message,
 				}),
 			});
+
 			return { success: true, data };
 		} catch (error) {
+			console.error(error);
 			return { success: false, error };
 		}
 	}
