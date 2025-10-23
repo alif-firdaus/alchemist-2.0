@@ -20,19 +20,19 @@ function Navbar() {
 	const navLinks = [
 		{
 			text: "About",
-			path: "/about",
+			path: "/#about",
 		},
 		{
 			text: "Expertise",
-			path: "/expertise",
+			path: "/#expertise",
 		},
 		{
 			text: "Works",
-			path: "/#case-studies",
+			path: "/#works",
 		},
 		{
 			text: "Contact",
-			path: "https://dribbble.com/aliffirdaus",
+			path: "/#contact",
 		},
 	];
 
@@ -151,41 +151,65 @@ function Navbar() {
 
 						{/* <-- === Socials Start === --> */}
 						<div className="w-full flex items-center justify-center h-fit">
-							<div className="flex w-full h-[70px] items-center justify-center border-r-[1px] border-b-[1px] border-dark-border">
+							<Link
+								href="https://dribbble.com/aliffirdaus"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex w-full h-[70px] items-center justify-center border-r-[1px] border-b-[1px] border-dark-border"
+							>
 								<Image
 									src={dribbble}
 									alt="Dribbble"
 									priority={true}
 									className="h-[17px] w-auto"
 								/>
-							</div>
-							<div className="flex w-full h-[70px] items-center justify-center border-r-[1px] border-b-[1px] border-dark-border">
+							</Link>
+
+							<Link
+								href="https://www.linkedin.com/in/aliffirdaus97/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex w-full h-[70px] items-center justify-center border-r-[1px] border-b-[1px] border-dark-border"
+							>
 								<Image
 									src={linkedin}
 									alt="Linkedin"
 									priority={true}
 									className="h-[17px] w-auto"
 								/>
-							</div>
-							<div className="flex w-full h-[70px] items-center justify-center border-b-[1px] border-dark-border">
+							</Link>
+
+							<Link
+								href="https://twitter.com/whereisalif"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex w-full h-[70px] items-center justify-center border-b-[1px] border-dark-border"
+							>
 								<Image
 									src={x}
 									alt="X"
 									priority={true}
 									className="h-[17px] w-auto"
 								/>
-							</div>
+							</Link>
 						</div>
 						{/* <-- === Socials End === --> */}
 
 						{/* <-- === CTA Start === --> */}
-						<div className="flex w-full h-fit items-center justify-center px-[30px] py-[30px]">
+
+						<Link
+							href="https://cal.com/aliffirdaus/discovery-call"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex w-full h-fit items-center justify-center px-[30px] py-[30px]"
+						>
 							<PrimaryButton
 								text="Book a Discovery Call"
 								bgColor="bg-charcoal"
 								textColor="text-floral-white"
 							/>
-						</div>
+						</Link>
+
 						{/* <-- === CTA End === --> */}
 					</div>
 				</div>
@@ -194,7 +218,6 @@ function Navbar() {
 			{/* <-- ==== Navbar Mobile End ==== --> */}
 
 			{/* <-- ==== Navbar Desktop Start ==== --> */}
-
 			{/* <-- ==== Navbar Desktop End ==== --> */}
 		</>
 	);

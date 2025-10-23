@@ -9,7 +9,10 @@ import divider from "@/assets/images/img-divider.svg";
 
 export default function WorksSection() {
 	return (
-		<section className="flex flex-col w-full h-auto items-center justify-center px-content-padding-sm">
+		<section
+			id="works"
+			className="flex flex-col w-full h-auto items-center justify-center px-content-padding-sm"
+		>
 			<div className="flex flex-col w-full h-auto items-center justify-center border-x-[1px] border-dark-border">
 				{/* <-- === Top Content Start === --> */}
 				<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[70px] pt-16 pb-[70px] border-b-[1px] border-dark-border">
