@@ -4,7 +4,7 @@ import Image from "next/image";
 import WorksCard from "../molecule/works-card";
 
 // Import Assets //
-import mockup from "@/assets/images/img-mockup-2.webp";
+import deepstack from "@/assets/images/img-deepstack-mockup.webp";
 import divider from "@/assets/images/img-divider.svg";
 
 export default function WorksSection() {
@@ -33,16 +33,16 @@ export default function WorksSection() {
 				{/* <-- === Bottom Content Start === --> */}
 				<div className="flex flex-col items-center justify-center w-full h-auto">
 					<WorksCard
-						thumbnail={mockup}
-						thumbnailalt="mockup"
-						thumbnailtitle="mockup"
+						thumbnail={deepstack}
+						thumbnailalt="Deepstack"
+						thumbnailtitle="mDeepstack"
 						order="W+01"
 						title="Deepstack"
 						description="Deepstack is a high-end AI workspace built for speed and clarity - made for founders who want a polished hub for work."
 					/>
 
 					<WorksCard
-						thumbnail={mockup}
+						thumbnail={deepstack}
 						thumbnailalt="mockup"
 						thumbnailtitle="mockup"
 						order="W+02"
@@ -51,7 +51,7 @@ export default function WorksSection() {
 					/>
 
 					<WorksCard
-						thumbnail={mockup}
+						thumbnail={deepstack}
 						thumbnailalt="mockup"
 						thumbnailtitle="mockup"
 						order="W+03"
@@ -60,7 +60,7 @@ export default function WorksSection() {
 					/>
 
 					<WorksCard
-						thumbnail={mockup}
+						thumbnail={deepstack}
 						thumbnailalt="mockup"
 						thumbnailtitle="mockup"
 						order="W+04"
