@@ -35,7 +35,6 @@ export default function WorksSection() {
 					<WorksCard
 						thumbnail={deepstack}
 						thumbnailalt="Deepstack"
-						thumbnailtitle="mDeepstack"
 						order="W+01"
 						title="Deepstack"
 						description="Deepstack is a high-end AI workspace built for speed and clarity - made for founders who want a polished hub for work."
@@ -44,7 +43,6 @@ export default function WorksSection() {
 					<WorksCard
 						thumbnail={deepstack}
 						thumbnailalt="mockup"
-						thumbnailtitle="mockup"
 						order="W+02"
 						title="REELKID"
 						description="Velto helps founders automate operations, content workflows, and teamless processes in minutes, no-prompt engineering."
@@ -53,7 +51,6 @@ export default function WorksSection() {
 					<WorksCard
 						thumbnail={deepstack}
 						thumbnailalt="mockup"
-						thumbnailtitle="mockup"
 						order="W+03"
 						title="Fluxify"
 						description="Velto helps founders automate operations, content workflows, and teamless processes in minutes, no-prompt engineering."
@@ -62,7 +59,6 @@ export default function WorksSection() {
 					<WorksCard
 						thumbnail={deepstack}
 						thumbnailalt="mockup"
-						thumbnailtitle="mockup"
 						order="W+04"
 						title="Vismonk"
 						description="Velto helps founders automate operations, content workflows, and teamless processes in minutes, no-prompt engineering."

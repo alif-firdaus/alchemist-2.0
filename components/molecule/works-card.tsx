@@ -7,7 +7,6 @@ import SecondaryButton from "../atom/secondary-button";
 interface WorksCardProps {
 	thumbnail: StaticImport;
 	thumbnailalt: string;
-	thumbnailtitle: string;
 	order: string;
 	title: string;
 	description: string;
@@ -16,7 +15,6 @@ interface WorksCardProps {
 const WorksCard = ({
 	thumbnail,
 	thumbnailalt,
-	thumbnailtitle,
 	order,
 	title,
 	description,
@@ -27,7 +25,6 @@ const WorksCard = ({
 				<Image
 					src={thumbnail}
 					alt={thumbnailalt}
-					title={thumbnailtitle}
 					priority={true}
 					className="object-cover object-center w-full h-auto"
 				/>
