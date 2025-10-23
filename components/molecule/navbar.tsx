@@ -58,6 +58,23 @@ function Navbar() {
 	const NavItem = ({ text, path }: NavItemProps) => {
 		const isExternalLink = path.startsWith("http");
 
+		const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+			if (path.startsWith("/#")) {
+				e.preventDefault();
+				const id = path.replace("/#", "");
+				const section = document.getElementById(id);
+				if (section) {
+					const yOffset = -70;
+					const y =
+						section.getBoundingClientRect().top +
+						window.scrollY +
+						yOffset;
+					window.scrollTo({ top: y, behavior: "smooth" });
+					closeMenu();
+				}
+			}
+		};
+
 		if (isExternalLink) {
 			return (
 				<Link
@@ -71,7 +88,7 @@ function Navbar() {
 			);
 		} else {
 			return (
-				<Link href={path} onClick={closeMenu}>
+				<Link href={path} onClick={handleClick}>
 					{text}
 				</Link>
 			);
@@ -87,7 +104,7 @@ function Navbar() {
 				} `}
 			>
 				<div className="flex w-full items-center justify-between h-full pl-content-padding-sm">
-					<Link href="/">
+					<Link href="/" onClick={closeMenu}>
 						<div className="w-fit h-fit flex items-center justify-center">
 							<Image
 								src={logotype}
