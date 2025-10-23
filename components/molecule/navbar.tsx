@@ -14,47 +14,34 @@ import dottedclose from "@/assets/icons/icon-dotted-close.svg";
 import dribbble from "@/assets/icons/icon-dribbble.svg";
 import linkedin from "@/assets/icons/icon-linkedin.svg";
 import x from "@/assets/icons/icon-x.svg";
+import avatar from "@/assets/images/img-avatar.webp";
+import dribbbleblack from "@/assets/icons/icon-dribbble-black.svg";
+import linkedinblack from "@/assets/icons/icon-linkedin-black.svg";
+import xblack from "@/assets/icons/icon-x-black.svg";
 
-function Navbar() {
+type NavbarProps = {
+	variant?: "mobile" | "sidebar";
+};
+
+function Navbar({ variant = "mobile" }: NavbarProps) {
 	// Navbar Links //
 	const navLinks = [
-		{
-			text: "About",
-			path: "/#about",
-		},
-		{
-			text: "Expertise",
-			path: "/#expertise",
-		},
-		{
-			text: "Works",
-			path: "/#works",
-		},
-		{
-			text: "Contact",
-			path: "/#contact",
-		},
+		{ text: "About", path: "/#about" },
+		{ text: "Expertise", path: "/#expertise" },
+		{ text: "Works", path: "/#works" },
+		{ text: "Contact", path: "/#contact" },
 	];
 
-	// Navbar Mobile View //
+	// Mobile Menu State //
 	const [isOpen, setOpen] = useState(false);
+	const toggleMenu = () => setOpen((prev) => !prev);
+	const closeMenu = () => setOpen(false);
 
-	// Navbar Toggle //
-	const toggleMenu = () => {
-		setOpen((prevOpen) => !prevOpen);
-	};
-
-	// Close menu when navigating //
-	const closeMenu = () => {
-		setOpen(false);
-	};
-
-	// External Link Path //
+	// Link Handler //
 	interface NavItemProps {
 		text: string;
 		path: string;
 	}
-
 	const NavItem = ({ text, path }: NavItemProps) => {
 		const isExternalLink = path.startsWith("http");
 
@@ -86,22 +73,93 @@ function Navbar() {
 					{text}
 				</Link>
 			);
-		} else {
-			return (
-				<Link href={path} onClick={handleClick}>
-					{text}
-				</Link>
-			);
 		}
+
+		return (
+			<Link href={path} onClick={handleClick}>
+				{text}
+			</Link>
+		);
 	};
 
+	// ======================
+	// Sidebar (Desktop) Navbar
+	// ======================
+	if (variant === "sidebar") {
+		return (
+			<aside className="hidden lg:flex fixed left-0 top-0 h-screen w-auto bg-floral-white flex-col justify-between z-20">
+				<div>
+					<Image
+						src={avatar}
+						alt="avatar"
+						priority={true}
+						className="h-[100px] w-[100px]"
+					/>
+
+					{/* Nav Links */}
+					<ul className="flex flex-col text-sm w-full h-auto items-center justify-center">
+						{navLinks.map((link, index) => (
+							<li
+								key={index}
+								className="flex items-center justify-center w-[100px] h-[100px] border-b-[1px] border-light-border font-aeonik-medium text-charcoal hover:text-floral-white bg-inherit hover:bg-lava duration-300 cursor-pointer"
+							>
+								<NavItem text={link.text} path={link.path} />
+							</li>
+						))}
+					</ul>
+				</div>
+
+				{/* Footer Section */}
+				<div className="flex flex-col w-full h-auto items-center justify-center">
+					<Link
+						href="https://dribbble.com/aliffirdaus"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="flex items-center justify-center w-[100px] h-[100px] border-b-[1px] border-t-[1px] border-light-border bg-inherit hover:bg-lava duration-300 cursor-pointer"
+					>
+						<Image
+							src={dribbbleblack}
+							alt="Dribbble"
+							className="h-4 w-auto"
+						/>
+					</Link>
+
+					<Link
+						href="https://www.linkedin.com/in/aliffirdaus97/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="flex items-center justify-center w-[100px] h-[100px] border-b-[1px] border-light-border bg-inherit hover:bg-lava duration-300 cursor-pointer"
+					>
+						<Image
+							src={linkedinblack}
+							alt="LinkedIn"
+							className="h-4 w-auto"
+						/>
+					</Link>
+
+					<Link
+						href="https://twitter.com/whereisalif"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="flex items-center justify-center w-[100px] h-[100px] bg-inherit hover:bg-lava duration-300 cursor-pointer"
+					>
+						<Image src={xblack} alt="X" className="h-4 w-auto" />
+					</Link>
+				</div>
+			</aside>
+		);
+	}
+
+	// ======================
+	// Mobile Navbar (Default)
+	// ======================
 	return (
 		<>
-			{/* <-- ==== Navbar Mobile Start ==== --> */}
+			{/* Navbar Mobile Start */}
 			<nav
 				className={`fixed w-screen h-auto z-[10] border-b-[1px] border-dark-border ${
 					isOpen ? "bg-void" : "bg-bgbase"
-				} `}
+				}`}
 			>
 				<div className="flex w-full items-center justify-between h-full pl-content-padding-sm">
 					<Link href="/" onClick={closeMenu}>
@@ -115,43 +173,32 @@ function Navbar() {
 						</div>
 					</Link>
 
-					{/* <-- === Navbar Toggle === --> */}
+					{/* Navbar Toggle */}
 					<div
 						onClick={toggleMenu}
 						className="flex items-center justify-center bg-floral-white w-[70px] h-[70px] cursor-pointer"
 					>
-						{isOpen ? (
-							<Image
-								src={dottedclose}
-								alt="Close"
-								priority={true}
-								className="h-8 w-auto"
-							/>
-						) : (
-							<Image
-								src={dottedmenu}
-								alt="Menu"
-								priority={true}
-								className="h-8 w-auto"
-							/>
-						)}
+						<Image
+							src={isOpen ? dottedclose : dottedmenu}
+							alt={isOpen ? "Close" : "Menu"}
+							priority={true}
+							className="h-8 w-auto"
+						/>
 					</div>
-					{/* <-- === Navbar Toggle === --> */}
 				</div>
 			</nav>
 
-			{/* <-- ==== Navbar Open Start ==== --> */}
+			{/* Navbar Open */}
 			<div
-				className={`fixed w-full h-auto z-[9] px-5 bg-void border-b-[1px] border-dark-border lg:hidden
-            ${
-				isOpen
-					? "top-0 left-0 transition-all duration-500 ease-in-out"
-					: "-top-full left-0 transition-all duration-1000 ease-in-out"
-			}`}
+				className={`fixed w-full h-auto z-[9] px-5 bg-void border-b-[1px] border-dark-border lg:hidden ${
+					isOpen
+						? "top-0 left-0 transition-all duration-500 ease-in-out"
+						: "-top-full left-0 transition-all duration-1000 ease-in-out"
+				}`}
 			>
 				<div className="w-full flex flex-col h-full bg-void border-x-[1px] border-dark-border pt-[70px] justify-center items-center">
 					<div className="flex flex-col w-full h-fit">
-						{/* <-- === Navbar Links Start === --> */}
+						{/* Navbar Links */}
 						{navLinks.map((link, index) => (
 							<div
 								key={index}
@@ -164,56 +211,43 @@ function Navbar() {
 								/>
 							</div>
 						))}
-						{/* <-- === Navbar Links End === --> */}
 
-						{/* <-- === Socials Start === --> */}
+						{/* Socials */}
 						<div className="w-full flex items-center justify-center h-fit">
-							<Link
-								href="https://dribbble.com/aliffirdaus"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex w-full h-[70px] items-center justify-center border-r-[1px] border-b-[1px] border-dark-border"
-							>
-								<Image
-									src={dribbble}
-									alt="Dribbble"
-									priority={true}
-									className="h-[17px] w-auto"
-								/>
-							</Link>
-
-							<Link
-								href="https://www.linkedin.com/in/aliffirdaus97/"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex w-full h-[70px] items-center justify-center border-r-[1px] border-b-[1px] border-dark-border"
-							>
-								<Image
-									src={linkedin}
-									alt="Linkedin"
-									priority={true}
-									className="h-[17px] w-auto"
-								/>
-							</Link>
-
-							<Link
-								href="https://twitter.com/whereisalif"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex w-full h-[70px] items-center justify-center border-b-[1px] border-dark-border"
-							>
-								<Image
-									src={x}
-									alt="X"
-									priority={true}
-									className="h-[17px] w-auto"
-								/>
-							</Link>
+							{[
+								{
+									href: "https://dribbble.com/aliffirdaus",
+									src: dribbble,
+									alt: "Dribbble",
+								},
+								{
+									href: "https://www.linkedin.com/in/aliffirdaus97/",
+									src: linkedin,
+									alt: "LinkedIn",
+								},
+								{
+									href: "https://twitter.com/whereisalif",
+									src: x,
+									alt: "X",
+								},
+							].map(({ href, src, alt }, index) => (
+								<Link
+									key={index}
+									href={href}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex w-full h-[70px] items-center justify-center border-b-[1px] border-dark-border"
+								>
+									<Image
+										src={src}
+										alt={alt}
+										className="h-[17px] w-auto"
+									/>
+								</Link>
+							))}
 						</div>
-						{/* <-- === Socials End === --> */}
 
-						{/* <-- === CTA Start === --> */}
-
+						{/* CTA */}
 						<Link
 							href="https://cal.com/aliffirdaus/discovery-call"
 							target="_blank"
@@ -226,16 +260,9 @@ function Navbar() {
 								textColor="text-floral-white"
 							/>
 						</Link>
-
-						{/* <-- === CTA End === --> */}
 					</div>
 				</div>
 			</div>
-			{/* <-- ==== Navbar Open End ==== --> */}
-			{/* <-- ==== Navbar Mobile End ==== --> */}
-
-			{/* <-- ==== Navbar Desktop Start ==== --> */}
-			{/* <-- ==== Navbar Desktop End ==== --> */}
 		</>
 	);
 }

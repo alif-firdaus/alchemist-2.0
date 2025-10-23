@@ -50,7 +50,12 @@ export default function RootLayout({
 			<body
 				className={`${aeonikLight.variable} ${aeonikRegular.variable} ${aeonikMedium.variable} ${satoshi.variable} bg-bgbase`}
 			>
-				<Navbar />
+				<header className="flex lg:hidden">
+					<Navbar />
+				</header>
+				<header className="hidden lg:flex">
+					<Navbar variant="sidebar" />
+				</header>
 				<LenisWrapper>{children}</LenisWrapper>
 				<Footer />
 			</body>
