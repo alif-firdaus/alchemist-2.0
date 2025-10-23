@@ -43,6 +43,8 @@ export default function WorksSection() {
 						description="Deepstack is a high-end AI workspace built for speed and clarity - made for founders who want a polished hub for work."
 					/>
 
+					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
+
 					<WorksCard
 						thumbnail={deepstack}
 						thumbnailalt="mockup"
@@ -51,6 +53,8 @@ export default function WorksSection() {
 						description="Velto helps founders automate operations, content workflows, and teamless processes in minutes, no-prompt engineering."
 					/>
 
+					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
+
 					<WorksCard
 						thumbnail={deepstack}
 						thumbnailalt="mockup"
@@ -58,6 +62,8 @@ export default function WorksSection() {
 						title="Fluxify"
 						description="Velto helps founders automate operations, content workflows, and teamless processes in minutes, no-prompt engineering."
 					/>
+
+					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
 
 					<WorksCard
 						thumbnail={deepstack}
