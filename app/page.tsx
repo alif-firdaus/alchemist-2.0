@@ -13,13 +13,6 @@ export default function Home() {
 			<ExpertiseSection />
 			<WorksSection />
 			<ContactSection />
-
-			<div className="w-full h-72 relative">
-				{/* Your content here */}
-				<div className="p-10 text-charcoal">
-					This section will cover the hero section as you scroll down.
-				</div>
-			</div>
 		</main>
 	);
 }

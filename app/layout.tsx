@@ -5,6 +5,7 @@ import "./globals.css";
 // Import Components //
 import Navbar from "@/components/molecule/navbar";
 import LenisWrapper from "@/components/atom/lenis-wrapper";
+import Footer from "@/components/molecule/footer";
 
 const aeonikLight = localFont({
 	src: "./fonts/aeonik-light.otf",
@@ -51,6 +52,7 @@ export default function RootLayout({
 			>
 				<Navbar />
 				<LenisWrapper>{children}</LenisWrapper>
+				<Footer />
 			</body>
 		</html>
 	);

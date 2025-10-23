@@ -8,7 +8,7 @@ import Image from "next/image";
 import PrimaryButton from "../atom/primary-button";
 
 // Import Assets //
-import logowhite from "@/assets/images/img-logotype-white.svg";
+import logotype from "@/assets/images/img-logotype.svg";
 import dottedmenu from "@/assets/icons/icon-dotted-menu.svg";
 import dottedclose from "@/assets/icons/icon-dotted-close.svg";
 import dribbble from "@/assets/icons/icon-dribbble.svg";
@@ -90,9 +90,8 @@ function Navbar() {
 					<Link href="/">
 						<div className="w-fit h-fit flex items-center justify-center">
 							<Image
-								src={logowhite}
-								alt="Alchemist Logo"
-								title="Alchemist Logo"
+								src={logotype}
+								alt="Alchemist"
 								priority={true}
 								className="h-4 w-auto"
 							/>
@@ -108,7 +107,6 @@ function Navbar() {
 							<Image
 								src={dottedclose}
 								alt="Close"
-								title="Close"
 								priority={true}
 								className="h-8 w-auto"
 							/>
@@ -116,7 +114,6 @@ function Navbar() {
 							<Image
 								src={dottedmenu}
 								alt="Menu"
-								title="Menu"
 								priority={true}
 								className="h-8 w-auto"
 							/>
@@ -158,7 +155,6 @@ function Navbar() {
 								<Image
 									src={dribbble}
 									alt="Dribbble"
-									title="Dribbble"
 									priority={true}
 									className="h-[17px] w-auto"
 								/>
@@ -167,7 +163,6 @@ function Navbar() {
 								<Image
 									src={linkedin}
 									alt="Linkedin"
-									title="Linkedin"
 									priority={true}
 									className="h-[17px] w-auto"
 								/>
@@ -176,7 +171,6 @@ function Navbar() {
 								<Image
 									src={x}
 									alt="X"
-									title="X"
 									priority={true}
 									className="h-[17px] w-auto"
 								/>
