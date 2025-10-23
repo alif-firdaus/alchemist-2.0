@@ -33,15 +33,35 @@ export default function Footer() {
 
 					<div className="flex flex-col w-full h-auto items-start justify-center gap-4">
 						<div className="flex w-full h-auto items-center justify-start gap-7">
-							<p className="text-base text-floral-white font-aeonik-regular">
-								Dribbble
-							</p>
-							<p className="text-base text-floral-white font-aeonik-regular">
-								Linkedin
-							</p>
-							<p className="text-base text-floral-white font-aeonik-regular">
-								Twitter
-							</p>
+							<Link
+								href="https://dribbble.com/aliffirdaus"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<p className="text-base text-floral-white font-aeonik-regular">
+									Dribbble
+								</p>
+							</Link>
+
+							<Link
+								href="https://www.linkedin.com/in/aliffirdaus97/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<p className="text-base text-floral-white font-aeonik-regular">
+									Linkedin
+								</p>
+							</Link>
+
+							<Link
+								href="https://twitter.com/whereisalif"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<p className="text-base text-floral-white font-aeonik-regular">
+									Twitter
+								</p>
+							</Link>
 						</div>
 
 						<p className="text-base text-smoke font-aeonik-regular">

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // Import Components //
 import PrimaryButton from "../atom/primary-button";
 
@@ -22,11 +24,18 @@ export default function HeroSection() {
 							</p>
 						</div>
 
-						<PrimaryButton
-							text="Book a Discovery Call"
-							bgColor="bg-floral-white"
-							textColor="text-charcoal"
-						/>
+						<Link
+							href="https://cal.com/aliffirdaus/discovery-call"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center justify-center w-full h-auto"
+						>
+							<PrimaryButton
+								text="Book a Discovery Call"
+								bgColor="bg-floral-white"
+								textColor="text-charcoal"
+							/>
+						</Link>
 					</div>
 
 					<div className="flex w-full items-center justify-start h-auto">

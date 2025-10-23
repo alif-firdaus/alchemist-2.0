@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // Import Components //
 import ContactForm from "../molecule/contact-form";
@@ -12,7 +13,10 @@ import email from "@/assets/images/img-email.svg";
 
 export default function ContactSection() {
 	return (
-		<section className="flex flex-col w-full h-auto items-center justify-center px-content-padding-sm">
+		<section
+			id="contact"
+			className="flex flex-col w-full h-auto items-center justify-center px-content-padding-sm"
+		>
 			<div className="flex flex-col w-full h-auto items-center justify-center border-x-[1px] border-dark-border">
 				{/* <-- === Headline Start === --> */}
 				<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[30px] pt-16 pb-20 border-b-[1px] border-dark-border">
@@ -61,12 +65,18 @@ export default function ContactSection() {
 					</div>
 
 					<div className="flex items-center justify-center p-[30px] bg-lava w-full h-auto">
-						<Image
-							src={email}
-							alt={email}
-							priority={true}
-							className="object-cover object-center w-full h-auto"
-						/>
+						<Link
+							href={"mailto:aliffirdaus@petaniweb.com"}
+							target="_blank"
+							className="flex items-center justify-center w-full h-auto"
+						>
+							<Image
+								src={email}
+								alt={email}
+								priority={true}
+								className="object-cover object-center w-full h-auto"
+							/>
+						</Link>
 					</div>
 				</div>
 				{/* <-- === Email End === --> */}

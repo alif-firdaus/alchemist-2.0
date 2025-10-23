@@ -7,7 +7,10 @@ import idcard from "@/assets/images/img-alchemist-id-card.webp";
 
 export default function AboutSection() {
 	return (
-		<section className="flex flex-col w-full h-auto items-center justify-center px-content-padding-sm">
+		<section
+			id="about"
+			className="flex flex-col w-full h-auto items-center justify-center px-content-padding-sm"
+		>
 			<div className="flex flex-col w-full h-auto items-center justify-center border-x-[1px] border-dark-border">
 				{/* <-- === Divider Start === --> */}
 				<div className="flex flex-col w-full h-auto items-center justify-center">
