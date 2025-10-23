@@ -16,7 +16,6 @@ export default function AboutSection() {
 						<Image
 							src={divider}
 							alt="Divider"
-							title="Divider"
 							priority={true}
 							className="h-full w-full object-cover object-center"
 						/>
@@ -46,7 +45,6 @@ export default function AboutSection() {
 								<Image
 									src={sparkle}
 									alt="Sparkle"
-									title="Sparkle"
 									priority={true}
 									className="w-[15px] h-auto"
 								/>
@@ -78,7 +76,6 @@ export default function AboutSection() {
 						<Image
 							src={idcard}
 							alt="ID Card"
-							title="ID Card"
 							priority={true}
 							className="object-center w-2/3 h-auto"
 						/>
@@ -90,7 +87,6 @@ export default function AboutSection() {
 								<Image
 									src={sparkle}
 									alt="Sparkle"
-									title="Sparkle"
 									priority={true}
 									className="w-[15px] h-auto"
 								/>
@@ -119,7 +115,6 @@ export default function AboutSection() {
 						<Image
 							src={divider}
 							alt="Divider"
-							title="Divider"
 							priority={true}
 							className="h-full w-full object-cover object-center"
 						/>

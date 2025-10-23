@@ -73,7 +73,6 @@ export default function WorksSection() {
 						<Image
 							src={divider}
 							alt="Divider"
-							title="Divider"
 							priority={true}
 							className="h-full w-full object-cover object-center"
 						/>
