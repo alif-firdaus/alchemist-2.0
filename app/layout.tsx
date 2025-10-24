@@ -5,6 +5,7 @@ import "./globals.css";
 // Import Components //
 import Navbar from "@/components/molecule/navbar";
 import LenisWrapper from "@/components/atom/lenis-wrapper";
+import HeaderDesktop from "@/components/molecule/header-desktop";
 import Footer from "@/components/molecule/footer";
 
 const aeonikLight = localFont({
@@ -50,14 +51,31 @@ export default function RootLayout({
 			<body
 				className={`${aeonikLight.variable} ${aeonikRegular.variable} ${aeonikMedium.variable} ${satoshi.variable} bg-bgbase`}
 			>
+				{/* Mobile header */}
 				<header className="flex lg:hidden">
 					<Navbar />
 				</header>
+
+				{/* Desktop sidebar */}
 				<header className="hidden lg:flex">
 					<Navbar variant="sidebar" />
 				</header>
-				<LenisWrapper>{children}</LenisWrapper>
-				<Footer />
+
+				{/* Main content area */}
+				<main className="lg:ml-[100px] lg:pt-[100px]">
+					{/* Fixed header (desktop only) */}
+					<div className="hidden lg:flex">
+						<HeaderDesktop />
+					</div>
+
+					{/* Smooth scrolling wrapper */}
+					<LenisWrapper>{children}</LenisWrapper>
+				</main>
+
+				{/* Footer aligned with content */}
+				<div className="lg:ml-[100px]">
+					<Footer />
+				</div>
 			</body>
 		</html>
 	);
