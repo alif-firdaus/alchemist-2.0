@@ -37,6 +37,29 @@ function Navbar({ variant = "mobile" }: NavbarProps) {
 	const toggleMenu = () => setOpen((prev) => !prev);
 	const closeMenu = () => setOpen(false);
 
+	// ✅ Custom smooth scroll function (same as Drop Me a Message)
+	const smoothScrollTo = (targetY: number, duration = 1200) => {
+		const startY = window.scrollY;
+		const distanceY = targetY - startY;
+		let startTime: number | null = null;
+
+		const easeInOutQuad = (t: number) =>
+			t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+		const animation = (currentTime: number) => {
+			if (startTime === null) startTime = currentTime;
+			const timeElapsed = currentTime - startTime;
+			const progress = Math.min(timeElapsed / duration, 1);
+			const ease = easeInOutQuad(progress);
+
+			window.scrollTo(0, startY + distanceY * ease);
+
+			if (timeElapsed < duration) requestAnimationFrame(animation);
+		};
+
+		requestAnimationFrame(animation);
+	};
+
 	// Link Handler //
 	interface NavItemProps {
 		text: string;
@@ -56,7 +79,7 @@ function Navbar({ variant = "mobile" }: NavbarProps) {
 						section.getBoundingClientRect().top +
 						window.scrollY +
 						yOffset;
-					window.scrollTo({ top: y, behavior: "smooth" });
+					smoothScrollTo(y, 1200); // ✅ replaced default smooth scroll
 					closeMenu();
 				}
 			}
@@ -99,12 +122,30 @@ function Navbar({ variant = "mobile" }: NavbarProps) {
 					{/* Nav Links */}
 					<ul className="flex flex-col text-sm w-full h-auto items-center justify-center">
 						{navLinks.map((link, index) => (
-							<li
+							<Link
 								key={index}
+								href={link.path}
+								onClick={(e) => {
+									if (link.path.startsWith("/#")) {
+										e.preventDefault();
+										const id = link.path.replace("/#", "");
+										const section =
+											document.getElementById(id);
+										if (section) {
+											const yOffset = -100;
+											const y =
+												section.getBoundingClientRect()
+													.top +
+												window.scrollY +
+												yOffset;
+											smoothScrollTo(y, 1200); // ✅ updated here too
+										}
+									}
+								}}
 								className="flex items-center justify-center w-[100px] h-[100px] border-b-[1px] border-light-border font-aeonik-medium text-charcoal hover:text-floral-white bg-inherit hover:bg-lava duration-300 cursor-pointer"
 							>
-								<NavItem text={link.text} path={link.path} />
-							</li>
+								{link.text}
+							</Link>
 						))}
 					</ul>
 				</div>

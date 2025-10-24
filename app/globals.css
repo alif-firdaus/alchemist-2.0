@@ -5,6 +5,7 @@
 	--color-bgbase: #0a0a0a;
 	--color-void: #151515;
 	--color-charcoal: #262626;
+	--color-metal: #2c2c2c;
 	--color-smoke: #aeaeae;
 	--color-lava: #fd5842;
 	--color-floral-white: #fffbef;
@@ -13,6 +14,7 @@
 
 	/* Spacing Extension */
 	--spacing-content-padding-sm: 20px;
+	--spacing-content-padding-lg: 50px;
 
 	/* Font Extension */
 	--font-aeonik-light: var(--font-aeonik-light), sans-serif;
