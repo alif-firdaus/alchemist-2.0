@@ -156,7 +156,7 @@ export default function AboutSection() {
 					{/* <-- === Right Content Desktop Start === --> */}
 					<div className="col-span-2 w-full h-auto">
 						<div className="flex flex-col w-full h-auto items-center justify-center">
-							<div className="flex flex-col items-start justify-start w-full h-[640px] gap-[30px] p-content-padding-lg border-b-[1px] border-dark-border">
+							<div className="flex flex-col items-start justify-start w-full h-[640px] gap-10 p-content-padding-lg border-b-[1px] border-dark-border">
 								<p className="text-xs text-smoke font-satoshi">
 									[ABOUT]
 								</p>
