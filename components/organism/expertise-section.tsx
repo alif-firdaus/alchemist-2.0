@@ -22,37 +22,39 @@ export default function ExpertiseSection() {
 	return (
 		<section
 			id="expertise"
-			className="flex flex-col w-full h-auto items-center justify-center px-content-padding-sm"
+			className="flex flex-col w-full h-auto items-center justify-center px-content-padding-sm lg:px-content-padding-lg"
 		>
-			<div className="flex flex-col w-full h-auto items-center justify-center border-x-[1px] border-dark-border">
+			<div className="flex flex-col w-full lg:max-w-[1536px] h-auto items-center justify-center border-x-[1px] border-dark-border">
 				{/* <-- === Top Content Start === --> */}
-				<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[70px] pt-16 pb-[70px] border-b-[1px] border-dark-border">
-					<div className="flex flex-col items-start justify-center w-full h-auto gap-[30px] ">
+				<div className="flex flex-col lg:flex-row items-start lg:items-end justify-center w-full h-auto px-[30px] lg:px-content-padding-lg gap-[70px] pt-16 lg:pt-[100px] pb-[70px] lg:pb-[110px] border-b-[1px] border-dark-border">
+					<div className="flex flex-col items-start justify-center w-full h-auto gap-[30px] lg:gap-10">
 						<p className="text-xs text-smoke font-satoshi">
 							[EXPERTISE]
 						</p>
 
-						<h1 className="text-[42px] text-floral-white font-aeonik-regular leading-none">
-							From paper to pixel,{" "}
+						<h1 className="text-[42px] lg:text-8xl text-floral-white font-aeonik-medium leading-none lg:leading-[0.92]">
+							From paper <br className="hidden lg:flex" /> to
+							pixel,{" "}
 							<span className="opacity-50">
-								craft in every detail
+								craft in <br className="hidden lg:flex" /> every
+								detail
 							</span>
 						</h1>
 					</div>
 
-					<h3 className="text-3xl text-floral-white font-aeonik-medium opacity-50">
+					<h3 className="text-3xl lg:text-4xl text-floral-white font-aeonik-medium opacity-50">
 						E+03
 					</h3>
 				</div>
 				{/* <-- === Top Content End === --> */}
 
 				{/* <-- === Bottom Content Start === --> */}
-				<div className="flex flex-col items-center justify-center w-full h-auto">
+				<div className="flex flex-col lg:flex-row items-center justify-center w-full h-auto">
 					{/* <-- == UI/UX Design Start == --> */}
-					<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[120px] pt-9 pb-9 border-b-[1px] border-dark-border">
+					<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[120px] lg:gap-40 pt-9 pb-9 lg:p-content-padding-lg border-b-[1px] lg:border-r-[1px] border-dark-border">
 						<div className="flex flex-col items-start justify-center w-full h-auto gap-7">
 							<p className="text-xs text-smoke font-satoshi">
-								[E+01]
+								E+01
 							</p>
 							<h3 className="text-[32px] text-floral-white font-aeonik-medium leading-[1.2]">
 								UI/UX <br />{" "}
@@ -91,10 +93,10 @@ export default function ExpertiseSection() {
 					{/* <-- == UI/UX Design End == --> */}
 
 					{/* <-- == No-code Development Start == --> */}
-					<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[120px] pt-9 pb-9 border-b-[1px] border-dark-border">
+					<div className="flex flex-col items-start justify-center w-full h-auto lg:h-full px-[30px] gap-[120px] lg:gap-40 pt-9 pb-9 lg:p-content-padding-lg border-b-[1px] lg:border-r-[1px] border-dark-border">
 						<div className="flex flex-col items-start justify-center w-full h-auto gap-7">
 							<p className="text-xs text-smoke font-satoshi">
-								[E+02]
+								E+02
 							</p>
 							<h3 className="text-[32px] text-floral-white font-aeonik-medium leading-[1.2]">
 								No-code <br />{" "}
@@ -107,31 +109,36 @@ export default function ExpertiseSection() {
 							</p>
 						</div>
 
-						<div className="flex flex-wrap w-full h-auto gap-3 items-center justify-start">
-							<ToolsPill
-								logo={framer}
-								logoalt="Framer"
-								title="Framer"
-							/>
-							<ToolsPill
-								logo={webflow}
-								logoalt="Webflow"
-								title="Webflow"
-							/>
-							<ToolsPill
-								logo={flutterflow}
-								logoalt="Flutterflow"
-								title="Flutterflow"
-							/>
+						<div className="flex flex-col gap-3 w-full h-auto">
+							<div className="flex flex-row gap-3">
+								<ToolsPill
+									logo={framer}
+									logoalt="Framer"
+									title="Framer"
+								/>
+								<ToolsPill
+									logo={webflow}
+									logoalt="Webflow"
+									title="Webflow"
+								/>
+							</div>
+
+							<div className="flex items-center justify-start">
+								<ToolsPill
+									logo={flutterflow}
+									logoalt="Flutterflow"
+									title="Flutterflow"
+								/>
+							</div>
 						</div>
 					</div>
 					{/* <-- == No-code Development End == --> */}
 
 					{/* <-- == Front-end Development Start == --> */}
-					<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[120px] pt-9 pb-9 border-b-[1px] border-dark-border">
+					<div className="flex flex-col items-start justify-center w-full h-auto px-[30px] gap-[120px] lg:gap-40 pt-9 pb-9 lg:p-content-padding-lg border-b-[1px] border-dark-border">
 						<div className="flex flex-col items-start justify-center w-full h-auto gap-7">
 							<p className="text-xs text-smoke font-satoshi">
-								[E+03]
+								E+03
 							</p>
 							<h3 className="text-[32px] text-floral-white font-aeonik-medium leading-[1.2]">
 								Front-end <br />{" "}
