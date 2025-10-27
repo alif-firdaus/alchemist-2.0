@@ -160,9 +160,13 @@ export default function ContactSection() {
 				<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
 
 				{/* <-- == Bottom Content Start == --> */}
-				<div className="flex w-full h-auto items-center justify-center px-content-padding-lg pb-content-padding-lg pt-14 bg-lava group cursor-pointer">
+				<Link
+					href={"mailto:aliffirdaus@petaniweb.com"}
+					target="_blank"
+					className="flex w-full h-auto items-center justify-center px-content-padding-lg pb-content-padding-lg pt-14 bg-lava group cursor-pointer"
+				>
 					<EmailText className="w-full h-auto text-bgbase group-hover:text-floral-white transition-colors duration-500 ease-in-out" />
-				</div>
+				</Link>
 				{/* <-- == Bottom Content End == --> */}
 
 				{/* <-- === Divider Start === --> */}
