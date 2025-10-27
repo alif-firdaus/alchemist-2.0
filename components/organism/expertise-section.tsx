@@ -56,7 +56,7 @@ export default function ExpertiseSection() {
 							<p className="text-xs text-smoke font-satoshi">
 								E+01
 							</p>
-							<h3 className="text-[32px] text-floral-white font-aeonik-medium leading-[1.2]">
+							<h3 className="text-[32px] lg:text-4xl text-floral-white font-aeonik-medium leading-[1.2]">
 								UI/UX <br />{" "}
 								<span className="opacity-50">Design</span>
 							</h3>
@@ -98,7 +98,7 @@ export default function ExpertiseSection() {
 							<p className="text-xs text-smoke font-satoshi">
 								E+02
 							</p>
-							<h3 className="text-[32px] text-floral-white font-aeonik-medium leading-[1.2]">
+							<h3 className="text-[32px] lg:text-4xl text-floral-white font-aeonik-medium leading-[1.2]">
 								No-code <br />{" "}
 								<span className="opacity-50">Development</span>
 							</h3>
@@ -140,7 +140,7 @@ export default function ExpertiseSection() {
 							<p className="text-xs text-smoke font-satoshi">
 								E+03
 							</p>
-							<h3 className="text-[32px] text-floral-white font-aeonik-medium leading-[1.2]">
+							<h3 className="text-[32px] lg:text-4xl text-floral-white font-aeonik-medium leading-[1.2]">
 								Front-end <br />{" "}
 								<span className="opacity-50">Development</span>
 							</h3>
