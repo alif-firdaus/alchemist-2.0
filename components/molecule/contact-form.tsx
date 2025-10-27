@@ -64,7 +64,7 @@ export default function ContactForm() {
 		<div className="w-full">
 			<form
 				onSubmit={handleSubmit(processForm)}
-				className="flex flex-col w-full h-auto items-center justify-center gap-9"
+				className="flex flex-col w-full h-auto items-center lg:items-start justify-center gap-9"
 			>
 				{/* Name */}
 				<div className="flex flex-col items-start justify-center gap-3 w-full h-auto">
