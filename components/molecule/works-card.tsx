@@ -21,7 +21,7 @@ const WorksCard = ({
 }: WorksCardProps) => {
 	return (
 		<div className="flex flex-col w-full h-auto items-center justify-center">
-			<div className="flex w-full h-auto p-[30px] border-b-[1px] border-dark-border">
+			<div className="flex w-full h-auto p-[30px] lg:p-content-padding-lg border-b-[1px] border-dark-border">
 				<Image
 					src={thumbnail}
 					alt={thumbnailalt}
