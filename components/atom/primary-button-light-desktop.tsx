@@ -3,13 +3,18 @@ import { CornerDownRight } from "lucide-react";
 
 interface PrimaryButtonLightDesktopProps {
 	text: string;
+	type?: "button" | "submit" | "reset";
 }
 
 const PrimaryButtonLightDesktop = ({
 	text,
+	type = "button",
 }: PrimaryButtonLightDesktopProps) => {
 	return (
-		<button className="group flex items-center justify-between w-fit gap-4 h-fit rounded pl-[18px] pr-[10px] py-[10px] cursor-pointer bg-floral-white overflow-hidden">
+		<button
+			type={type}
+			className="group flex items-center justify-between w-fit gap-4 h-fit rounded pl-[18px] pr-[10px] py-[10px] cursor-pointer bg-floral-white overflow-hidden"
+		>
 			{/* Animated text container */}
 			<div className="relative h-fit overflow-hidden flex items-center">
 				{/* Default text */}

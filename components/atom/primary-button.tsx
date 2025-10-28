@@ -7,6 +7,7 @@ interface PrimaryButtonProps {
 	textColor: string;
 	bgColorHover?: string;
 	type?: "button" | "submit" | "reset";
+	disabled?: boolean;
 }
 
 const PrimaryButton = ({
@@ -15,15 +16,20 @@ const PrimaryButton = ({
 	textColor,
 	bgColorHover,
 	type = "button",
+	disabled = false,
 }: PrimaryButtonProps) => {
 	const bgColorClass = bgColor;
 	const textColorClass = textColor;
 	const hoverClass = bgColorHover ? `lg:hover:${bgColorHover}` : "";
+	const disabledClass = disabled
+		? "opacity-60 cursor-not-allowed pointer-events-none"
+		: "";
 
 	return (
 		<button
 			type={type}
-			className={`flex items-center justify-between w-full lg:w-fit lg:gap-4 h-fit rounded pl-[18px] pr-3 lg:pr-[10px] py-3 lg:py-[10px] cursor-pointer ${bgColorClass} ${textColorClass} ${hoverClass} transition-all duration-300`}
+			disabled={disabled}
+			className={`flex items-center justify-between w-full lg:w-fit lg:gap-4 h-fit rounded pl-[18px] pr-3 lg:pr-[10px] py-3 lg:py-[10px] cursor-pointer ${bgColorClass} ${textColorClass} ${hoverClass} ${disabledClass} transition-all duration-300`}
 		>
 			<p className="text-base lg:text-sm font-aeonik-medium flex w-fit h-fit items-center justify-center pb-[2px]">
 				{text}
