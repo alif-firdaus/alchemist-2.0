@@ -6,59 +6,53 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
 import { ContactFormSchema } from "@/lib/schema";
+import { sendEmail } from "@/app/_action";
 
-// Import Components //
 import PrimaryButton from "../atom/primary-button";
+import PrimaryButtonLightDesktop from "../atom/primary-button-light-desktop";
 
 export type ContactFormInputs = z.infer<typeof ContactFormSchema>;
 
 export default function ContactForm() {
-	const [feedback, setFeedback] = useState<{
-		type: "success" | "error" | null;
-		message: string;
-	}>({ type: null, message: "" });
+	const [status, setStatus] = useState<
+		"idle" | "sending" | "success" | "error"
+	>("idle");
 
 	const {
 		register,
 		handleSubmit,
 		reset,
-		formState: { errors, isSubmitting },
+		formState: { errors },
 	} = useForm<ContactFormInputs>({
 		resolver: zodResolver(ContactFormSchema),
 	});
 
 	const processForm: SubmitHandler<ContactFormInputs> = async (data) => {
-		setFeedback({ type: null, message: "" });
+		setStatus("sending");
 
-		try {
-			const res = await fetch("/api/form", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(data),
-			});
+		const result = await sendEmail(data);
 
-			const result = await res.json();
+		if (result?.success) {
+			setStatus("success");
+			reset();
 
-			if (result.success) {
-				setFeedback({
-					type: "success",
-					message: "Your message has been sent!",
-				});
-				reset();
-			} else {
-				setFeedback({
-					type: "error",
-					message: "Something went wrong! Please try again.",
-				});
-			}
-		} catch (error) {
-			console.error(error);
-			setFeedback({
-				type: "error",
-				message: "Something went wrong! Please try again.",
-			});
+			setTimeout(() => {
+				setStatus("idle");
+			}, 6000);
+
+			return;
 		}
+
+		console.error(result?.error);
+		setStatus("error");
 	};
+
+	const buttonText =
+		status === "sending"
+			? "Transmitting..."
+			: status === "success"
+				? "Transmission complete"
+				: "Initiate Transmission";
 
 	return (
 		<div className="w-full">
@@ -71,7 +65,6 @@ export default function ContactForm() {
 					<p className="text-sm text-floral-white font-aeonik-regular">
 						Name
 					</p>
-
 					<input
 						type="text"
 						placeholder="Enter your name"
@@ -127,27 +120,24 @@ export default function ContactForm() {
 					)}
 				</div>
 
-				{/* Submit */}
-				<PrimaryButton
-					type="submit"
-					text={isSubmitting ? "Wait a sec..." : "Send message"}
-					bgColor="bg-floral-white"
-					textColor="text-charcoal"
-				/>
-			</form>
+				{/* Submit button */}
+				<div className="flex lg:hidden w-full h-auto">
+					<PrimaryButton
+						type="submit"
+						text={buttonText}
+						bgColor="bg-floral-white"
+						textColor="text-charcoal"
+						disabled={status === "sending"}
+					/>
+				</div>
 
-			{/* Feedback Message */}
-			{feedback.message && (
-				<p
-					className={`mt-4 text-sm ${
-						feedback.type === "success"
-							? "text-green-400"
-							: "text-red-400"
-					}`}
-				>
-					{feedback.message}
-				</p>
-			)}
+				<div className="hidden lg:flex">
+					<PrimaryButtonLightDesktop
+						type="submit"
+						text={buttonText}
+					/>
+				</div>
+			</form>
 		</div>
 	);
 }
