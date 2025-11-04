@@ -9,6 +9,8 @@ import deepstack from "@/assets/images/img-deepstack.webp";
 import deepstackdesktop from "@/assets/images/img-deepstack-desktop.webp";
 import augentic from "@/assets/images/img-augentic.webp";
 import augenticdesktop from "@/assets/images/img-augentic-desktop.webp";
+import fluxify from "@/assets/images/img-fluxify.webp";
+import fluxifydesktop from "@/assets/images/img-fluxify-desktop.webp";
 import divider from "@/assets/images/img-divider.svg";
 
 export default function WorksSection() {
@@ -55,17 +57,17 @@ export default function WorksSection() {
 
 					<WorksCard
 						thumbnail={deepstack}
-						thumbnailalt="mockup"
+						thumbnailalt="Deepstack"
 						order="W+02"
-						title="REELKID"
+						title="Deepstack"
 						description="Velto helps founders automate operations, content workflows, and teamless processes in minutes, no-prompt engineering."
 					/>
 
 					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
 
 					<WorksCard
-						thumbnail={deepstack}
-						thumbnailalt="mockup"
+						thumbnail={fluxify}
+						thumbnailalt="Fluxify"
 						order="W+03"
 						title="Fluxify"
 						description="Velto helps founders automate operations, content workflows, and teamless processes in minutes, no-prompt engineering."
@@ -109,8 +111,8 @@ export default function WorksSection() {
 						order="W+03"
 						title="Fluxify"
 						description="Deepstack is a high-end AI workspace built for speed and clarity - made for founders who want a polished hub for work."
-						thumbnail={deepstackdesktop}
-						thumbnailalt="Deepstack"
+						thumbnail={fluxifydesktop}
+						thumbnailalt="Fluxify"
 					/>
 
 					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
