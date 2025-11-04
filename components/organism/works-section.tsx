@@ -5,8 +5,9 @@ import WorksCard from "../molecule/works-card";
 import WorksCardDesktop from "../molecule/works-card-desktop";
 
 // Import Assets //
-import deepstack from "@/assets/images/img-deepstack-mockup.webp";
+import deepstack from "@/assets/images/img-deepstack.webp";
 import deepstackdesktop from "@/assets/images/img-deepstack-desktop.webp";
+import augentic from "@/assets/images/img-augentic.webp";
 import augenticdesktop from "@/assets/images/img-augentic-desktop.webp";
 import divider from "@/assets/images/img-divider.svg";
 
@@ -43,10 +44,10 @@ export default function WorksSection() {
 				{/* <-- === Bottom Content Start === --> */}
 				<div className="flex lg:hidden flex-col items-center justify-center w-full h-auto">
 					<WorksCard
-						thumbnail={deepstack}
-						thumbnailalt="Deepstack"
+						thumbnail={augentic}
+						thumbnailalt="Augentic"
 						order="W+01"
-						title="Deepstack"
+						title="Augentic"
 						description="Deepstack is a high-end AI workspace built for speed and clarity - made for founders who want a polished hub for work."
 					/>
 
