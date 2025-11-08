@@ -40,6 +40,42 @@ export const metadata: Metadata = {
 	title: "Alif Firdaus • The Alchemist",
 	description:
 		"Personal site of Alif Firdaus — designer, developer, and explorer of all things digital.",
+	openGraph: {
+		title: "Alif Firdaus • The Alchemist",
+		description:
+			"Personal site of Alif Firdaus — designer, developer, and explorer of all things digital.",
+		url: "https://aliffirdaus.com",
+		siteName: "The Alchemist",
+		images: [
+			{
+				url: "/og-2400x1260.webp",
+				width: 2400,
+				height: 1260,
+				alt: "Alif Firdaus — The Alchemist",
+			},
+			{
+				url: "/og-1200x630.webp",
+				width: 1200,
+				height: 630,
+				alt: "Alif Firdaus — The Alchemist",
+			},
+			{
+				url: "/og-1200x1200.webp",
+				width: 1200,
+				height: 1200,
+				alt: "Alif Firdaus — The Alchemist (Square)",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Alif Firdaus • The Alchemist",
+		description:
+			"Personal site of Alif Firdaus — designer, developer, and explorer of all things digital.",
+		images: ["/og-1200x630.webp"],
+	},
 };
 
 export default function RootLayout({
