@@ -11,6 +11,8 @@ import augentic from "@/assets/images/img-augentic.webp";
 import augenticdesktop from "@/assets/images/img-augentic-desktop.webp";
 import fluxify from "@/assets/images/img-fluxify.webp";
 import fluxifydesktop from "@/assets/images/img-fluxify-desktop.webp";
+import baseline from "@/assets/images/img-baseline.webp";
+import baselinedesktop from "@/assets/images/img-baseline-desktop.webp";
 import divider from "@/assets/images/img-divider.svg";
 
 export default function WorksSection() {
@@ -50,7 +52,17 @@ export default function WorksSection() {
 						thumbnailalt="Augentic"
 						order="W+01"
 						title="Augentic"
-						description="Deepstack is a high-end AI workspace built for speed and clarity - made for founders who want a polished hub for work."
+						description="AI-powered company secretary platform that automates compliance, governance, and statutory filings — ensuring accuracy and efficiency 24/7."
+					/>
+
+					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
+
+					<WorksCard
+						thumbnail={baseline}
+						thumbnailalt="Baseline"
+						order="W+02"
+						title="Baseline"
+						description="Baseline is a creative agency that blends structure and artistry, turning bold ideas into refined visual experiences built on clarity, rhythm, and purpose."
 					/>
 
 					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
@@ -58,9 +70,9 @@ export default function WorksSection() {
 					<WorksCard
 						thumbnail={deepstack}
 						thumbnailalt="Deepstack"
-						order="W+02"
+						order="W+03"
 						title="Deepstack"
-						description="Velto helps founders automate operations, content workflows, and teamless processes in minutes, no-prompt engineering."
+						description="Built for solo founders and lean teams, Deepstack automates the busywork so you can focus on strategy, growth, and building what truly matters."
 					/>
 
 					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
@@ -68,19 +80,9 @@ export default function WorksSection() {
 					<WorksCard
 						thumbnail={fluxify}
 						thumbnailalt="Fluxify"
-						order="W+03"
-						title="Fluxify"
-						description="Velto helps founders automate operations, content workflows, and teamless processes in minutes, no-prompt engineering."
-					/>
-
-					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
-
-					<WorksCard
-						thumbnail={deepstack}
-						thumbnailalt="mockup"
 						order="W+04"
-						title="Vismonk"
-						description="Velto helps founders automate operations, content workflows, and teamless processes in minutes, no-prompt engineering."
+						title="Fluxify"
+						description="Fluxify is a modern SaaS platform built to simplify business operations — unifying tasks, teams, and workflows into one seamless experience."
 					/>
 				</div>
 				{/* <-- === Bottom Content End === --> */}
@@ -90,7 +92,7 @@ export default function WorksSection() {
 					<WorksCardDesktop
 						order="W+01"
 						title="Augentic"
-						description="Deepstack is a high-end AI workspace built for speed and clarity - made for founders who want a polished hub for work."
+						description="AI-powered company secretary platform that automates compliance, governance, and statutory filings — ensuring accuracy and efficiency 24/7."
 						thumbnail={augenticdesktop}
 						thumbnailalt="Augentic"
 					/>
@@ -99,31 +101,33 @@ export default function WorksSection() {
 
 					<WorksCardDesktop
 						order="W+02"
-						title="Deepstack"
-						description="Deepstack is a high-end AI workspace built for speed and clarity - made for founders who want a polished hub for work."
-						thumbnail={deepstackdesktop}
-						thumbnailalt="Deepstack"
+						title="Baseline"
+						description="Baseline is a creative agency that blends structure and artistry, turning bold ideas into refined visual experiences built on clarity, rhythm, and purpose."
+						thumbnail={baselinedesktop}
+						thumbnailalt="Baseline"
 					/>
 
 					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
 
 					<WorksCardDesktop
 						order="W+03"
-						title="Fluxify"
-						description="Deepstack is a high-end AI workspace built for speed and clarity - made for founders who want a polished hub for work."
-						thumbnail={fluxifydesktop}
-						thumbnailalt="Fluxify"
+						title="Deepstack"
+						description="Built for solo founders and lean teams, Deepstack automates the busywork so you can focus on strategy, growth, and building what truly matters."
+						thumbnail={deepstackdesktop}
+						thumbnailalt="Deepstack"
 					/>
 
 					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
 
 					<WorksCardDesktop
 						order="W+04"
-						title="Vismonk"
-						description="Deepstack is a high-end AI workspace built for speed and clarity - made for founders who want a polished hub for work."
-						thumbnail={deepstackdesktop}
-						thumbnailalt="Deepstack"
+						title="Fluxify"
+						description="Fluxify is a modern SaaS platform built to simplify business operations — unifying tasks, teams, and workflows into one seamless experience."
+						thumbnail={fluxifydesktop}
+						thumbnailalt="Fluxify"
 					/>
+
+					<div className="flex w-full h-[30px] border-b-[1px] border-dark-border"></div>
 				</div>
 				{/* <-- === Bottom Content Desktop End === --> */}
 
