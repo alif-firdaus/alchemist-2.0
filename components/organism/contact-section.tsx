@@ -3,7 +3,7 @@ import Link from "next/link";
 
 // Import Components //
 import ContactForm from "../molecule/contact-form";
-import EmailText from "../atom/email-text";
+import EmailText from "../atom/email-text-2";
 
 // Import Icons //
 import { CornerRightDown } from "lucide-react";
